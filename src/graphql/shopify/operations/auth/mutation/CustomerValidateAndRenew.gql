@@ -1,0 +1,13 @@
+# If validation fails, then redirect user to signin.
+mutation CustomerValidateAndRenew($accessToken: String!) @api(name: "shopify") {
+  customerAccessTokenRenew(customerAccessToken: $accessToken) {
+    customerAccessToken {
+      accessToken
+      expiresAt
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}

@@ -1,0 +1,49 @@
+fragment RichTextDetails on SectionRichText {
+  title
+  sectionRichText {
+    __typename
+    json
+    links {
+      entries {
+        hyperlink {
+          sys {
+            id
+          }
+        }
+        inline {
+          sys {
+            id
+          }
+        }
+        block {
+          __typename
+          sys {
+            id
+          }
+        }
+      }
+      assets {
+        hyperlink {
+          __typename
+          title
+          description
+          contentType
+          url
+          sys {
+            id
+          }
+        }
+        block {
+          __typename
+          title
+          description
+          contentType
+          url
+          sys {
+            id
+          }
+        }
+      }
+    }
+  }
+}

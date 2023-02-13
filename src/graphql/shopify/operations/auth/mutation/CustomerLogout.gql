@@ -1,0 +1,10 @@
+mutation CustomerLogout($accessToken: String!) @api(name: "shopify") {
+  customerAccessTokenDelete(customerAccessToken: $accessToken) {
+    deletedAccessToken
+    deletedCustomerAccessTokenId
+    userErrors {
+      field
+      message
+    }
+  }
+}

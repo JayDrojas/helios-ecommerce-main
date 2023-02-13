@@ -1,0 +1,7 @@
+query ValidateCollectionHandle($handle: String!) @api(name: "shopify") {
+  collection(handle: $handle) {
+    title
+    handle
+    id
+  }
+}

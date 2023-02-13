@@ -1,0 +1,24 @@
+mutation CreateCheckout(
+  $lineItems: [CheckoutLineItemInput!]
+  $email: String
+  $shippingAddress: MailingAddressInput
+  $languageCode: LanguageCode!
+) @api(name: "shopify") @inContext(language: $languageCode) {
+  checkoutCreate(
+    input: {
+      lineItems: $lineItems
+      email: $email
+      shippingAddress: $shippingAddress
+    }
+  ) {
+    checkout {
+      id
+      webUrl
+    }
+    checkoutUserErrors {
+      code
+      field
+      message
+    }
+  }
+}

@@ -1,0 +1,7 @@
+query ViewCart($cartId: ID!, $language: LanguageCode!)
+@api(name: "shopify")
+@inContext(language: $language) {
+  cart(id: $cartId) {
+    ...CartContents
+  }
+}

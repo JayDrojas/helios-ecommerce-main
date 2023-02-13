@@ -1,0 +1,58 @@
+query ProductVariantDetailed(
+  $handle: String!
+  $selectedOptions: [SelectedOptionInput!]!
+  $language: LanguageCode
+) @api(name: "shopify") @inContext(language: $language) {
+  product(handle: $handle) {
+    id
+    title
+    variantBySelectedOptions(selectedOptions: $selectedOptions) {
+      quantityAvailable
+      id
+      title
+      availableForSale
+      requiresShipping
+      weight
+      image {
+        id
+        url
+        height
+        width
+        altText
+      }
+      price {
+        amount
+        currencyCode
+      }
+
+      metafields(
+        identifiers: [
+          { namespace: "dimensions", key: "length" }
+          { namespace: "dimensions", key: "width" }
+          { namespace: "dimensions", key: "height" }
+          { namespace: "custom", key: "specifications" }
+        ]
+      ) {
+        key
+        value
+        description
+      }
+      metafield(key: "previewMedia", namespace: "system") {
+        key
+        value
+        references(first: 10) {
+          nodes {
+            __typename
+            ... on MediaImage {
+              image {
+                id
+                url(transform: { preferredContentType: JPG, maxWidth: 1200 })
+                altText
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

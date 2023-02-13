@@ -1,0 +1,221 @@
+{
+  "home": {
+    "buttons": {
+      "see-all": "Ver Todo",
+      "view-product": "Ver Producto",
+      "go-to": "Ir A"
+    }
+  },
+  "navbar": {
+    "catalog": "Catálogo",
+    "about-us": "Sobre nosotros",
+    "account": "Cuenta"
+  },
+  "account": {
+    "my-account": "Mi Cuenta"
+  },
+  "authmessages": {
+    "logout": "¡Has cerrado sesión correctamente!",
+    "logout-desc": "¡Has cerrado sesión correctamente!",
+    "processing": "Procesando...",
+    "customer-disabled-message": "¡Se requiere activación de cuenta!",
+    "success": "¡Éxito!",
+    "success-description": "Tu cuenta ha sido creada.",
+    "customer-signedin-message": "¡Ya has iniciado sesión!",
+    "login-success": "¡Ya estás conectado! Redirigiendo a casa.",
+    "redirect-homepage-message": "Redireccionando a la página de inicio...",
+    "customer-update-success": "Actualización de cuenta",
+    "customer-update-success-desc": "La cuenta ha sido actualizada.",
+    "basic-error-message": "Cuenta Error",
+    "basic-error-message-desc": "Algo salió mal...",
+    "account-page-redirect-title": "Necesita iniciar sesión para acceder a la página de la cuenta.",
+    "account-page-redirect-desc": "Redirigir a la página de inicio de sesión."
+  },
+  "buttons": {
+    "logout-bttn": "Cerrar Sesión",
+    "signup-bttn": "Inscribirse",
+    "login-bttn": "Iniciar Sesión",
+    "create-account-bttn": "Crear una Cuenta"
+  },
+  "signup-page": {
+    "title": "Crear una Cuenta",
+    "first-name": "Primer Nombre",
+    "last-name": "Apellido",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "login-message": "¿Ya tienes una cuenta?"
+  },
+  "login-page": {
+    "title": "Iniciar Sesión",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "signup-message": "¿No tienes una cuenta?"
+  },
+  "auth-button-popover": {
+    "not-loggedin-message": "Sin iniciar sesión"
+  },
+  "account-page": {
+    "title": "Cuenta",
+    "meta": "Pagina de Cuenta",
+    "tab-titles": {
+      "overview": "Resumen",
+      "info": "Información",
+      "addresses": "Direcciones",
+      "order": "Ordenes"
+    },
+    "overview-tab": {
+      "first-name": "Primer Nombre",
+      "last-name": "Apellido",
+      "email": "Correo Electrónico",
+      "default-address": "Dirección predeterminada",
+      "phone": "Teléfono"
+    },
+    "info": {
+      "title": "Información"
+    },
+    "orders-tab": {
+      "labels": {
+        "date": "Fecha",
+        "total": "Total",
+        "order-number": "Ordenar #",
+        "order-status": "Order Status",
+        "track-package": "Estado del Pedido",
+        "cancel-order": "Cancelar Orden",
+        "FULFILLED": "Cumplido",
+        "IN_PROGRESS": "Procesando pedido",
+        "ON_HOLD": "Procesando pedido",
+        "UNFULFILLED": "NProcesando pedido",
+        "PARTIALLY_FULFILLED": "Procesando pedido",
+        "SCHEDULED": "Procesando pedido"
+      }
+    }
+  },
+  "auth-forms": {
+    "labels": {
+      "first-name": "Primer Nombre",
+      "last-name": "Apellido",
+      "email": "Correo Electrónico",
+      "default-address": "Dirección predeterminada",
+      "phone": "Teléfono"
+    },
+    "buttons": {
+      "save": "Guardar"
+    }
+  },
+  "address-forms": {
+    "labels": {
+      "first-name": "Primer Nombre",
+      "last-name": "Apellido",
+      "email": "Correo Electrónico",
+      "default-address": "Dirección predeterminada",
+      "phone": "Teléfono",
+      "other": "Otra",
+      "address1": "Dirección 1",
+      "address2": "Dirección 2",
+      "city": "Ciudad",
+      "country": "País",
+      "zip": "Código Postal",
+      "phone-number": "Número de teléfono"
+    },
+    "messages": {
+      "no-address": "Agrega una dirección.",
+      "account-update": "Cuenta",
+      "account-update-desc": "La cuenta ha sido actualizada.",
+      "taken": "Esta dirección ya está en su dirección guardada.",
+      "default-address-update": "Se ha cambiado la dirección predeterminada.",
+      "create-address": "Crear nueva dirección",
+      "no-default": "No se ha establecido una dirección predeterminada. Cree una dirección en la pestaña de direcciones.",
+      "address-created-success": "Crear Dirección.",
+      "address-created-success-desc": "Se ha creado la dirección.",
+      "error-title": "Error de cuenta",
+      "address-already-saved": "Esta dirección ya está en su dirección guardada.",
+      "address-deleted-error": "Eliminar dirección",
+      "address-deleted-error-desc": "No se puede eliminar la dirección...",
+      "address-deleted-success": "Eliminar dirección",
+      "address-deleted-success-desc": "¡La dirección ha sido eliminada!"
+    },
+    "buttons": {
+      "create-address-bttn": "Agregar nueva dirección",
+      "set-default": "Establecer predeterminado",
+      "save": "Guardar"
+    },
+    "country-select": {
+      "usa": "Estados Unidos",
+      "cad": "Canadá",
+      "mx": "México"
+    }
+  },
+  "catalog-page": {
+    "title": "Catálogo",
+    "buttons": {
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "options-controller": {
+      "min-price-title": "Rango de Precio Mínimo"
+    }
+  },
+  "product-page": {
+    "title": "Detalles de Producto",
+    "tabs": {
+      "desc": "Descripción",
+      "shipping": "Envío y Devoluciones",
+      "spec": "Especificación"
+    },
+    "messages": {
+      "variant-non-exists": "La variante no existe.",
+      "out-of-stock": "Agotado 😢",
+      "limit-exceeded": "El límite de artículos está actualmente en max.😥",
+      "toast-limit-exceeded": "Límite excedido",
+      "toast-limit-exceeded-desc": "La cantidad actual de este artículo en el carrito está en el límite del stock disponible."
+    },
+    "buttons": {
+      "add-cart": "Añadir al Carro"
+    },
+    "specification-tab": {
+      "specification": {
+        "title": "Especificaciones",
+        "caption": "Las especificaciones varían según las opciones seleccionadas.",
+        "specification": "Especificaciones",
+        "value": "Valor",
+        "specs-unavailable": "Las especificaciones no están disponibles."
+      },
+      "dimensions": {
+        "title": "Dimensiones",
+        "caption": "Las dimensiones varían según las opciones seleccionadas",
+        "measurement": "Medición",
+        "value": "Valor"
+      }
+    },
+    "shipping-tab": {
+      "shipping-unavailable": "La información de envío no está disponible actualmente."
+    }
+  },
+  "cart-page": {
+    "title": "Carro",
+    "subtotal": "Total parcial",
+    "guest": "Visita",
+    "buttons": {
+      "proceed-checkout": "Pasar por la Caja",
+      "view": "Ver Carro"
+    },
+    "messages": {
+      "empty-cart": "Tu carro esta vacío...",
+      "added-cart": "¡Agregado al carro!",
+      "tax-shipping": "Impuestos y envío calculados al finalizar la compra.",
+      "checking-out-as": "Comprobando como",
+      "creating-checkout": "Creando pago...",
+      "create-checkout-success": "¡Pago creado con éxito!",
+      "create-checkout-redirecting": "Redireccionando al pago..."
+    }
+  },
+  "footer": {
+    "made-by": "Hecho Por",
+    "terms": "Términos y Condiciones",
+    "privacy": "Política de Privacidad"
+  },
+  "meta": {
+    "404": "404 - página no encontrada",
+    "back-home": "regresar a casa"
+  }
+}

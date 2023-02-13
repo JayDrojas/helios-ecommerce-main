@@ -1,0 +1,7 @@
+query ProductMinimal($id: ID, $language: LanguageCode!)
+@api(name: "shopify")
+@inContext(language: $language) {
+  product(id: $id) {
+    ...ProductMinimalDetails
+  }
+}

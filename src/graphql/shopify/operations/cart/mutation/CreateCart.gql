@@ -1,0 +1,7 @@
+mutation CreateCart @api(name: "shopify") {
+  cartCreate {
+    cart {
+      id
+    }
+  }
+}

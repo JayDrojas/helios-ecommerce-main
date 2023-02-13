@@ -1,0 +1,12 @@
+mutation CustomerSignup($input: CustomerCreateInput!) @api(name: "shopify") {
+  customerCreate(input: $input) {
+    customer {
+      id
+    }
+    customerUserErrors {
+      field
+      message
+      code
+    }
+  }
+}

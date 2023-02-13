@@ -1,0 +1,32 @@
+fragment CartContents on Cart {
+  id
+  totalQuantity
+  lines(first: 100) {
+    nodes {
+      id
+      merchandise {
+        ... on ProductVariant {
+          ...ProductVariantMinimalDetails
+        }
+      }
+      quantity
+    }
+    pageInfo {
+      startCursor
+      endCursor
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+  checkoutUrl
+  buyerIdentity {
+    customer {
+      id
+      displayName
+      email
+    }
+  }
+  cost {
+    ...CartCostAmounts
+  }
+}

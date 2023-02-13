@@ -1,0 +1,18 @@
+fragment CartCostAmounts on CartCost {
+  subtotalAmount {
+    amount
+    currencyCode
+  }
+  totalTaxAmount {
+    amount
+    currencyCode
+  }
+  totalAmount {
+    amount
+    currencyCode
+  }
+  totalDutyAmount {
+    amount
+    currencyCode
+  }
+}

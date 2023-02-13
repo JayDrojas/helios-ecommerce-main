@@ -1,0 +1,94 @@
+query ProductDetailed($handle: String!, $language: LanguageCode!)
+@api(name: "shopify")
+@inContext(language: $language) {
+  product(handle: $handle) {
+    id
+    title
+    description
+    totalInventory
+    priceRange {
+      minVariantPrice {
+        amount
+        __typename
+      }
+      __typename
+    }
+    options {
+      name
+      values
+      id
+      __typename
+    }
+    images(first: 10) {
+      nodes {
+        id
+        url(transform: { preferredContentType: JPG, maxWidth: 1200 })
+        altText
+        __typename
+      }
+      __typename
+    }
+    metafields(identifiers: [{ namespace: "shipping", key: "details" }]) {
+      key
+      value
+      __typename
+    }
+    __typename
+    variants(first: 250) {
+      nodes {
+        selectedOptions {
+          name
+          value
+        }
+        quantityAvailable
+        id
+        title
+        product {
+          title
+        }
+        availableForSale
+        requiresShipping
+        weight
+        image {
+          id
+          url
+          height
+          width
+          altText
+        }
+        price {
+          amount
+          currencyCode
+        }
+        metafields(
+          identifiers: [
+            { namespace: "dimensions", key: "length" }
+            { namespace: "dimensions", key: "width" }
+            { namespace: "dimensions", key: "height" }
+            { namespace: "custom", key: "specifications" }
+          ]
+        ) {
+          key
+          value
+          description
+        }
+        metafield(key: "previewMedia", namespace: "system") {
+          key
+          value
+          references(first: 10) {
+            nodes {
+              __typename
+              ... on MediaImage {
+                image {
+                  id
+                  url(transform: { preferredContentType: JPG, maxWidth: 1200 })
+                  altText
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

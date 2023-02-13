@@ -1,0 +1,11 @@
+mutation CustomerAddressDelete($id: ID!, $customerAccessToken: String!)
+@api(name: "shopify") {
+  customerAddressDelete(id: $id, customerAccessToken: $customerAccessToken) {
+    deletedCustomerAddressId
+    customerUserErrors {
+      code
+      field
+      message
+    }
+  }
+}

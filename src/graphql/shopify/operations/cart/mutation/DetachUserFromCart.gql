@@ -1,0 +1,15 @@
+mutation DetachUserFromCart($cartId: ID!) @api(name: "shopify") {
+  cartBuyerIdentityUpdate(
+    buyerIdentity: { customerAccessToken: null }
+    cartId: $cartId
+  ) {
+    cart {
+      ...CartContents
+    }
+    userErrors {
+      code
+      field
+      message
+    }
+  }
+}

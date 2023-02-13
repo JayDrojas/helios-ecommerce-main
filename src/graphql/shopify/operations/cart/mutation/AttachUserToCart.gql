@@ -1,0 +1,16 @@
+mutation AttachUserToCart($cartId: ID!, $accessToken: String!)
+@api(name: "shopify") {
+  cartBuyerIdentityUpdate(
+    buyerIdentity: { customerAccessToken: $accessToken }
+    cartId: $cartId
+  ) {
+    cart {
+      ...CartContents
+    }
+    userErrors {
+      code
+      field
+      message
+    }
+  }
+}

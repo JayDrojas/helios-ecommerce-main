@@ -1,0 +1,222 @@
+{
+  "home": {
+    "buttons": {
+      "see-all": "See All",
+      "view-product": "View Product",
+      "go-to": "Go To"
+    }
+  },
+  "search": "Search",
+  "navbar": {
+    "catalog": "Catalog",
+    "about-us": "About Us",
+    "account": "Account"
+  },
+  "account": {
+    "my-account": "My Account"
+  },
+  "authmessages": {
+    "logout": "Logout",
+    "logout-desc": "You have successfully logged out!",
+    "processing": "Processing...",
+    "customer-disabled-message": "Account activation required!",
+    "success": "Success!",
+    "success-description": "Your account has been created.",
+    "customer-signedin-message": "You are already logged in!",
+    "login-success": "You are now logged in! Redirecting to home.",
+    "redirect-homepage-message": "Redirecting to home page...",
+    "customer-update-success": "Account update",
+    "customer-update-success-desc": "Account has been updated.",
+    "basic-error-message": "Account Error",
+    "basic-error-message-desc": "Something went wrong...",
+    "account-page-redirect-title": "You need to login to access the account page.",
+    "account-page-redirect-desc": "Redirecting to login page."
+  },
+  "buttons": {
+    "logout-bttn": "Log Out",
+    "signup-bttn": "Sign Up",
+    "login-bttn": "Log In",
+    "create-account-bttn": "Create Account"
+  },
+  "signup-page": {
+    "title": "Sign Up",
+    "first-name": "First Name",
+    "last-name": "Last Name",
+    "email": "Email",
+    "password": "Password",
+    "login-message": "Have an account already?"
+  },
+  "login-page": {
+    "title": "Log In",
+    "email": "Email",
+    "password": "Password",
+    "signup-message": "Dont have an account?"
+  },
+  "auth-button-popover": {
+    "not-loggedin-message": "Not Logged In"
+  },
+  "account-page": {
+    "title": "Account",
+    "meta": "Account Page",
+    "tab-titles": {
+      "overview": "Overview",
+      "info": "Info",
+      "addresses": "Addresses",
+      "order": "Orders"
+    },
+    "overview-tab": {
+      "first-name": "First Name",
+      "last-name": "Last Name",
+      "email": "Email",
+      "default-address": "Default Address",
+      "phone": "Phone"
+    },
+    "info": {
+      "title": "Info"
+    },
+    "orders-tab": {
+      "labels": {
+        "date": "Date",
+        "total": "Total",
+        "order-number": "Order #",
+        "order-status": "Order Status",
+        "track-package": "Track Package",
+        "cancel-order": "Cancel Order",
+        "FULFILLED": "Fulfilled",
+        "IN_PROGRESS": "Processing Order",
+        "ON_HOLD": "Processing Order",
+        "UNFULFILLED": "Processing Order",
+        "PARTIALLY_FULFILLED": "Processing Order",
+        "SCHEDULED": "Processing Order"
+      }
+    }
+  },
+  "auth-forms": {
+    "labels": {
+      "first-name": "First Name",
+      "last-name": "Last Name",
+      "email": "Email",
+      "default-address": "Default Address",
+      "phone": "Phone"
+    },
+    "buttons": {
+      "save": "Save"
+    }
+  },
+  "address-forms": {
+    "labels": {
+      "first-name": "First Name",
+      "last-name": "Last Name",
+      "email": "Email",
+      "default-address": "Default Address",
+      "phone": "Phone",
+      "other": "Other",
+      "address1": "Address",
+      "address2": "Address 2",
+      "city": "City",
+      "country": "Country",
+      "zip": "Zip Code",
+      "phone-number": "Phone Number"
+    },
+    "messages": {
+      "no-address": "Please add an address.",
+      "account-update": "Account",
+      "account-update-desc": "Account has been updated.",
+      "taken": "This address is already in your saved address.",
+      "default-address-update": "Default Address has been changed.",
+      "create-address": "Create New Address",
+      "no-default": "No default address set. Please create an address in the address tab.",
+      "address-created-success": "Create Address",
+      "address-created-success-desc": "Address has been created.",
+      "error-title": "Account Error",
+      "address-already-saved": "This address is already in your saved address.",
+      "default-address-deleted-error": "Delete Adrress",
+      "default-address-deleted-error-desc": "Unable to delete address...",
+      "default-address-deleted-success": "Delete Adrress",
+      "default-address-deleted-success-desc": "Address has been deleted!"
+    },
+    "buttons": {
+      "create-address-bttn": "Add New Address",
+      "set-default": "Set as default",
+      "save": "Save"
+    },
+    "country-select": {
+      "usa": "United States",
+      "cad": "Canada",
+      "mx": "Mexico"
+    }
+  },
+  "catalog-page": {
+    "title": "Catalog",
+    "buttons": {
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "options-controller": {
+      "min-price-title": "Minimum Price Range"
+    }
+  },
+  "product-page": {
+    "title": "Product Details",
+    "tabs": {
+      "desc": "Description",
+      "shipping": "Shipping & Returns",
+      "spec": "Specification"
+    },
+    "messages": {
+      "variant-non-exists": "Variant does not exists.",
+      "out-of-stock": "Out of Stock 😢",
+      "limit-exceeded": "Item limit is currently at max.😥",
+      "toast-limit-exceeded": "Limit exceeded",
+      "toast-limit-exceeded-desc": "Current quantity of this item in cart is at the limit for available stock."
+    },
+    "buttons": {
+      "add-cart": "Add to Cart"
+    },
+    "specification-tab": {
+      "specification": {
+        "title": "Specifications",
+        "caption": "Specifications vary by selected options.",
+        "specification": "Specification",
+        "value": "Value",
+        "specs-unavailable": "Specifications are unavailable."
+      },
+      "dimensions": {
+        "title": "Dimensions",
+        "caption": "Dimensions vary by selected options",
+        "measurement": "Measurement",
+        "value": "Value"
+      }
+    },
+    "shipping-tab": {
+      "shipping-unavailable": "Shipping information currently not available."
+    }
+  },
+  "cart-page": {
+    "title": "Cart",
+    "subtotal": "Subtotal",
+    "guest": "Guest",
+    "buttons": {
+      "proceed-checkout": "Proceed to Checkout",
+      "view": "View Cart"
+    },
+    "messages": {
+      "empty-cart": "Your cart is empty...",
+      "added-cart": "Added to Cart!",
+      "tax-shipping": "Tax and Shipping calculated at checkout.",
+      "checking-out-as": "Checking out as",
+      "creating-checkout": "Creating Checkout...",
+      "create-checkout-success": "Checkout successfully created!",
+      "create-checkout-redirecting": "Redirecting to checkout..."
+    }
+  },
+  "footer": {
+    "made-by": "Made by",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Polcy"
+  },
+  "meta": {
+    "404": "404 - Page Not Found",
+    "back-home": "Back Home"
+  }
+}

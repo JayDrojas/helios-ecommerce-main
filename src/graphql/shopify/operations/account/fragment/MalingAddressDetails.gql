@@ -1,0 +1,13 @@
+fragment MailingAddressDetails on MailingAddress {
+  address1
+  address2
+  id
+  city
+  zip
+  country
+  phone
+  formatted
+  formattedArea
+  firstName
+  lastName
+}

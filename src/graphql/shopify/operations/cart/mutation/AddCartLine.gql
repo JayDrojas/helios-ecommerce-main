@@ -1,0 +1,12 @@
+mutation AddCartLine($cartId: ID!, $merchandiseId: ID!) @api(name: "shopify") {
+  cartLinesAdd(cartId: $cartId, lines: [{ merchandiseId: $merchandiseId }]) {
+    cart {
+      ...CartContents
+    }
+    userErrors {
+      code
+      field
+      message
+    }
+  }
+}

@@ -1,0 +1,18 @@
+fragment ProductVariantMinimalDetails on ProductVariant {
+  id
+  title
+  product {
+    title
+    handle
+  }
+  price {
+    amount
+    currencyCode
+  }
+  image {
+    url(transform: { maxWidth: 750, preferredContentType: JPG })
+    altText
+    id
+  }
+  quantityAvailable
+}

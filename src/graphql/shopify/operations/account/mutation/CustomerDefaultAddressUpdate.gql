@@ -1,0 +1,27 @@
+mutation customerDefaultAddressUpdate(
+  $addressId: ID!
+  $customerAccessToken: String!
+) @api(name: "shopify") {
+  customerDefaultAddressUpdate(
+    addressId: $addressId
+    customerAccessToken: $customerAccessToken
+  ) {
+    customer {
+      id
+      firstName
+      lastName
+      displayName
+      email
+      phone
+      defaultAddress {
+        ...MailingAddressDetails
+      }
+    }
+    customerUserErrors {
+      code
+      field
+      message
+      __typename
+    }
+  }
+}

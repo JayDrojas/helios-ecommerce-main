@@ -1,0 +1,16 @@
+mutation UpdateCartLine($cartId: ID!, $lineId: ID!, $quantity: Int!)
+@api(name: "shopify") {
+  cartLinesUpdate(
+    cartId: $cartId
+    lines: [{ id: $lineId, quantity: $quantity }]
+  ) {
+    cart {
+      ...CartContents
+    }
+    userErrors {
+      code
+      field
+      message
+    }
+  }
+}

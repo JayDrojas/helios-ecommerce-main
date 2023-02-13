@@ -1,0 +1,13 @@
+query GetCustomerByAccessToken($accessToken: String!) @api(name: "shopify") {
+  customer(customerAccessToken: $accessToken) {
+    id
+    firstName
+    lastName
+    displayName
+    email
+    phone
+    defaultAddress {
+      ...MailingAddressDetails
+    }
+  }
+}

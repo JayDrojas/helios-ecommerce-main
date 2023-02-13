@@ -1,0 +1,12 @@
+mutation DeleteCartLine($cartId: ID!, $lineId: ID!) @api(name: "shopify") {
+  cartLinesRemove(cartId: $cartId, lineIds: [$lineId]) {
+    cart {
+      ...CartContents
+    }
+    userErrors {
+      code
+      field
+      message
+    }
+  }
+}

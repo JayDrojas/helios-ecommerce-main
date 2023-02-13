@@ -1,0 +1,25 @@
+fragment ProductMinimalDetails on Product {
+  handle
+  id
+  title
+  onlineStoreUrl
+  priceRange {
+    minVariantPrice {
+      amount
+      currencyCode
+    }
+    maxVariantPrice {
+      amount
+    }
+  }
+  featuredImage {
+    url(transform: { maxWidth: 750, preferredContentType: JPG })
+    id
+  }
+  metafield(key: "label", namespace: "system") {
+    id
+    key
+    namespace
+    value
+  }
+}

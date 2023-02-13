@@ -1,0 +1,46 @@
+query Footer($locale: String = "en") @api(name: "contentful") {
+  footerCollection(locale: $locale) {
+    items {
+      title
+      copyright
+      privacyUrl
+      termsUrl
+      publisher {
+        url
+        title
+      }
+      socialMediaLinksCollection {
+        items {
+          title
+          url
+          icon {
+            title
+            description
+            url
+          }
+        }
+      }
+      footerColumnsCollection {
+        items {
+          sys {
+            id
+          }
+          ... on FooterColumn {
+            title
+            footerColumnItemCollection {
+              items {
+                sys {
+                  id
+                }
+                ... on FooterColumnItem {
+                  title
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

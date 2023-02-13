@@ -1,0 +1,5 @@
+query ValidateCart($id: ID!) @api(name: "shopify") {
+  cart(id: $id) {
+    id
+  }
+}

@@ -1,0 +1,42 @@
+query CollectionCatalog(
+  $handle: String!
+  $first: Int
+  $last: Int
+  $after: String
+  $before: String
+  $filters: [ProductFilter!]
+  $sortKey: ProductCollectionSortKeys
+  $reverse: Boolean
+  $language: LanguageCode!
+) @api(name: "shopify") @inContext(language: $language) {
+  collection(handle: $handle) {
+    title
+    products(
+      first: $first
+      last: $last
+      after: $after
+      before: $before
+      filters: $filters
+      sortKey: $sortKey
+      reverse: $reverse
+    ) {
+      nodes {
+        ...ProductMinimalDetails
+      }
+      pageInfo {
+        startCursor
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
+      filters {
+        label
+        type
+        values {
+          label
+          input
+        }
+      }
+    }
+  }
+}

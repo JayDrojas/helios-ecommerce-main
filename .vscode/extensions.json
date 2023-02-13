@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "graphql.vscode-graphql",
+    "gruntfuggly.todo-tree",
+    "esbenp.prettier-vscode"
+  ]
+}

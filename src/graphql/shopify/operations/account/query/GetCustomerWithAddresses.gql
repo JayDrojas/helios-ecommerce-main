@@ -1,0 +1,25 @@
+query GetCustomerWithAddresses(
+  $accessToken: String!
+  $first: Int
+  $last: Int
+  $after: String
+  $before: String
+) @api(name: "shopify") {
+  customer(customerAccessToken: $accessToken) {
+    id
+    defaultAddress {
+      ...MailingAddressDetails
+    }
+    addresses(first: $first, last: $last, after: $after, before: $before) {
+      nodes {
+        ...MailingAddressDetails
+      }
+      pageInfo {
+        startCursor
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
+    }
+  }
+}

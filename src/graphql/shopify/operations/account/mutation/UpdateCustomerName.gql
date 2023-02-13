@@ -1,0 +1,50 @@
+mutation customerUpdate(
+  $customer: CustomerUpdateInput!
+  $customerAccessToken: String!
+) @api(name: "shopify") {
+  customerUpdate(
+    customer: $customer
+    customerAccessToken: $customerAccessToken
+  ) {
+    customer {
+      id
+      firstName
+      lastName
+      displayName
+      email
+      phone
+      defaultAddress {
+        ...MailingAddressDetails
+      }
+      addresses(first: 5) {
+        nodes {
+          ...MailingAddressDetails
+        }
+      }
+      orders(first: 10) {
+        nodes {
+          totalPrice {
+            amount
+            currencyCode
+          }
+          id
+          fulfillmentStatus
+          orderNumber
+          customerUrl
+          processedAt
+        }
+      }
+    }
+    customerAccessToken {
+      accessToken
+      expiresAt
+      __typename
+    }
+    customerUserErrors {
+      code
+      field
+      message
+      __typename
+    }
+  }
+}

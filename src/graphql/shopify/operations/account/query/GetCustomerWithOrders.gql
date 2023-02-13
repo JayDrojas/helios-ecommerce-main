@@ -1,0 +1,54 @@
+query GetCustomerWithOrders(
+  $accessToken: String!
+  $first: Int
+  $last: Int
+  $after: String
+  $before: String
+) @api(name: "shopify") {
+  customer(customerAccessToken: $accessToken) {
+    id
+    orders(first: $first, last: $last, after: $after, before: $before) {
+      pageInfo {
+        startCursor
+        endCursor
+        hasNextPage
+        hasPreviousPage
+      }
+      nodes {
+        id
+        fulfillmentStatus
+        orderNumber
+        customerUrl
+        processedAt
+        statusUrl
+        totalPrice {
+          amount
+          currencyCode
+        }
+        lineItems(first: 10) {
+          nodes {
+            title
+            quantity
+            variant {
+              title
+              quantityAvailable
+              price {
+                amount
+                currencyCode
+              }
+              product {
+                handle
+                title
+              }
+              image {
+                url
+                id
+                altText
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

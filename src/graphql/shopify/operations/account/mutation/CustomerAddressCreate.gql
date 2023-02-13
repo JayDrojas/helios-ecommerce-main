@@ -1,0 +1,18 @@
+mutation CustomerAddressCreate(
+  $address: MailingAddressInput!
+  $customerAccessToken: String!
+) @api(name: "shopify") {
+  customerAddressCreate(
+    address: $address
+    customerAccessToken: $customerAccessToken
+  ) {
+    customerAddress {
+      ...MailingAddressDetails
+    }
+    customerUserErrors {
+      code
+      field
+      message
+    }
+  }
+}

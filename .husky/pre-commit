@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# thanks David lol
+
+echo '🏗️👷 Styling, testing and building your project before committing'
+
+pnpm lint-staged
+pnpm test
+
+echo '🤔🤔🤔🤔... Alright... Code looks good to me... Trying to build now. 🤔🤔🤔🤔'
+
+pnpm build ||
+(
+    echo 'Next build failed: View the errors above to see why. '
+    false;
+)
+
+# If everything passes... Now we can commit
+echo '✅✅✅✅ Committing! ✅✅✅✅'

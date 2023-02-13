@@ -1,0 +1,19 @@
+query CollectionMinimal($id: ID, $language: LanguageCode!)
+@api(name: "shopify")
+@inContext(language: $language) {
+  collection(id: $id) {
+    title
+    id
+    handle
+    products(first: 3) {
+      nodes {
+        ...ProductMinimalDetails
+      }
+    }
+  }
+  localization {
+    language {
+      isoCode
+    }
+  }
+}

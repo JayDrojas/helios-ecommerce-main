@@ -1,0 +1,15 @@
+query SearchProducts($language: LanguageCode!, $queryString: String!)
+@api(name: "shopify")
+@inContext(language: $language) {
+  products(first: 50, query: $queryString) {
+    nodes {
+      ...ProductMinimalDetails
+    }
+    pageInfo {
+      startCursor
+      endCursor
+      hasNextPage
+      hasPreviousPage
+    }
+  }
+}

@@ -1,0 +1,92 @@
+query Page($slug: String = "", $locale: String = "en")
+@api(name: "contentful") {
+  pageCollection(where: { slug: $slug }, limit: 1, locale: $locale) {
+    items {
+      title
+      description
+      sectionsCollection {
+        total
+        items {
+          __typename
+          ... on SectionHero {
+            sectionName
+            header
+            backgroundImage {
+              url(transform: { format: JPG_PROGRESSIVE, width: 1600 })
+              description
+            }
+            colorTheme {
+              backgroundColor
+              contentColor
+            }
+          }
+          ... on SectionCollectionShowcase {
+            sectionName
+            customDisplayHeader
+            shopifyCollection
+            colorTheme {
+              backgroundColor
+              contentColor
+            }
+          }
+          ... on SectionProductShowcase {
+            sectionName
+            header
+            showcaseImage {
+              url(transform: { format: JPG_PROGRESSIVE, width: 1600 })
+              description
+            }
+            product
+            colorTheme {
+              backgroundColor
+              contentColor
+            }
+          }
+          ... on SectionDetailedLinkShowcase {
+            sectionName
+            header
+            imagesCollection(limit: 3) {
+              total
+              items {
+                url(transform: { format: JPG_PROGRESSIVE, width: 1600 })
+                description
+              }
+            }
+            captionBody
+            captionHeader
+            link
+            colorTheme {
+              backgroundColor
+              contentColor
+            }
+          }
+          ... on SectionDetailedProductShowcase {
+            sectionName
+            captionBody
+            captionHeader
+            header
+            imagesCollection(limit: 3) {
+              total
+              items {
+                url(transform: { format: JPG_PROGRESSIVE, width: 1600 })
+                description
+              }
+            }
+            product
+            colorTheme {
+              backgroundColor
+              contentColor
+            }
+          }
+          ... on SectionRichText {
+            ...RichTextDetails
+            colorTheme {
+              backgroundColor
+              contentColor
+            }
+          }
+        }
+      }
+    }
+  }
+}

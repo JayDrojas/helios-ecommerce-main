@@ -1,0 +1,19 @@
+query Navbar($locale: String = "en") @api(name: "contentful") {
+  navbarCollection(locale: $locale) {
+    items {
+      sys {
+        id
+      }
+      title
+      navLinksCollection {
+        items {
+          sys {
+            id
+          }
+          title
+          href
+        }
+      }
+    }
+  }
+}
